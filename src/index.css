@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Estilo global */
+body {
+  @apply bg-black text-white font-sans antialiased;
+}
+
+/* Links padrão com hover refinado */
+a {
+  @apply transition-all duration-200;
+}
+
+/* Botões padrão */
+button {
+  @apply transition-all duration-200 outline-none;
+}
+
+/* Cabeçalhos principais */
+h1, h2, h3 {
+  @apply font-bold tracking-tight text-balance;
+}
+
+/* Textos principais */
+p {
+  @apply leading-relaxed tracking-wide text-gray-300;
+}
+
+/* Animações leves */
+.hover-scale {
+  @apply hover:scale-105 transition-transform duration-300;
+}
+
+/* Cards ou blocos com estilo */
+.block-card {
+  @apply border border-gray-800 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300;
+}
+
+/* Utilitários visuais */
+.glass {
+  @apply backdrop-blur-md bg-white/5 border border-white/10;
+}
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  .animate-gradient {
+    animation: gradientMove 15s ease infinite;
+  }
+  
